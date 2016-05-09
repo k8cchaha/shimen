@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA1645E0-2041-4872-B4AD-AD23F98490D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsharpActiveX</RootNamespace>
+    <AssemblyName>CsharpActiveX</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aimetis.Connectivity, Version=6.14.0.0, Culture=neutral, PublicKeyToken=3e621d68966df9d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Aimetis.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Aimetis.Symphony.Common">
+      <HintPath>..\bin\Aimetis.Symphony.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="AxVideoRecvCtrl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\AxVideoRecvCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseIDL">
+      <HintPath>..\bin\BaseIDL.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="BaseLibCS">
+      <HintPath>..\bin\BaseLibCS.dll</HintPath>
+    </Reference>
+    <Reference Include="Configuration">
+      <HintPath>..\bin\Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceModel">
+      <HintPath>..\bin\DeviceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceModel.Dio">
+      <HintPath>..\bin\DeviceModel.Dio.dll</HintPath>
+    </Reference>
+    <Reference Include="DeviceModel.Security">
+      <HintPath>..\bin\DeviceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Farm">
+      <HintPath>..\bin\Farm.dll</HintPath>
+    </Reference>
+    <Reference Include="Farm.Security">
+      <HintPath>..\bin\Farm.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>..\bin\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Internationalization, Version=6.14.6.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Internationalization.dll</HintPath>
+    </Reference>
+    <Reference Include="SecurityLib">
+      <HintPath>..\bin\SecurityLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VideoRecvCtrlLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\bin\VideoRecvCtrlLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FarmForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FarmForm.Designer.cs">
+      <DependentUpon>FarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelloWord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IObjectSafety.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FarmForm.resx">
+      <DependentUpon>FarmForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{0e2a27e5-0634-44cd-bdfe-590176ba3437}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NotificationMonitors\NotificationMonitors.csproj">
+      <Project>{157e6d4f-94a9-4ecc-9f7c-80fec7c0ce57}</Project>
+      <Name>NotificationMonitors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

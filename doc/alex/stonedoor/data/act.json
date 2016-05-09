@@ -1,0 +1,19 @@
+{
+    "act": [
+        { "id": "1", "name": "1X1" },
+        { "id": "2", "name": "2X2" },
+        { "id": "3", "name": "3X3" },
+        { "id": "4", "name": "4X4" },
+
+        { "id": "7", "name": "雨量", "param": "db/rainfall.php" },
+        { "id": "8", "name": "水位", "param": "db/waterLevel.php" },
+
+        { "id": "10", "name": "新視窗" },
+        { "id": "11", "name": "準眼", "param": "eye/eye.php" },
+        { "id": "12", "name": "地震儀", "param": "db/earthquake.php" },
+        { "id": "13", "name": "量水堰", "param": "db/weir.php" },
+        { "id": "14", "name": "地下水井", "param": "db/groundWater.php" },
+
+        { "id": "14", "name": "ptz", "param": "ptz/ptz.php" }
+    ]
+}

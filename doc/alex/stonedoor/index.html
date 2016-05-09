@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>經濟部水利署北區水資源局</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/json2.js"></script>
+  </head>
+  <body>
+    <div class="webMain">
+      <div id="loginWnd">
+        <div style="height:100px"></div>
+        <img src="image/logo.png" height="225" width="225">
+        <h2 class="form-signin-heading" style="text-align:center;">請登入</h2>
+        <input type="email" id="inputAccount" class="form-control" placeholder="帳號" required="" autofocus="">
+        <div style="height:10px"></div>
+        <input type="password" id="inputPassword" class="form-control" placeholder="密碼" required="">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" id="rememberMe"> 記住帳號
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" id="loginBtn">登入</button>
+        <div class="errMsg">
+          
+        </div>
+      </div>
+      <div id="mainWnd" style="display:none;">
+        <div class="webHeader">
+          <img src="image/banner.png"/>
+          <div class="mainTitle">石門水庫安全防護中控平台</div>
+          <div class="logout">登出</div>
+        </div>
+        <div class="webContent paddingTop5">
+          <div class="floatLeft border">
+            <div class="serverNav paddingTop5">
+              <!-- insert menu dev here -->
+            </div>
+          </div>
+          <div class="floatRight ">
+            <div class="mapSize">
+              <div class="webMap border">
+                <div class="mask">
+                </div>
+                  <!-- insert map points here -->
+                <div id="mapPoints">
+                </div>
+                <div id="siteMenu" class="border" style="display:none;">
+                </div>
+              </div>
+            </div>
+            <div class="paddingTop5"></div>
+            <div class="tableInfo border ">
+              <div id="rainInfo"></div>
+              <div id="waterInfo" style="margin-top: -18px;"></div>
+              <div id="eyeInfo" style="margin-top: -18px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="webFooter paddingTop5">
+          <div>
+            <span>維護廠商: 盛喻科技</span>    
+            <span>電話: 03-4937709</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="webBg">
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

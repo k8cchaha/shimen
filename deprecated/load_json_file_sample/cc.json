@@ -1,0 +1,312 @@
+{
+	"aa": "Hello",
+	"bb": 123,
+	"cc": "cc",
+	
+	"point":[
+    {"id":"1", "name":"石門壩區", "content":[
+        {"item":"環湖影像*9", "act":"3", "param":[{"nvr":"3", "camera":"2"}, 
+												  {"nvr":"3", "camera":"3"},
+												  {"nvr":"3", "camera":"9"}, 
+												  {"nvr":"3", "camera":"4"},
+												  {"nvr":"3", "camera":"8"}, 
+												  {"nvr":"3", "camera":"7"},
+												  {"nvr":"3", "camera":"17"}, 
+												  {"nvr":"3", "camera":"6"},
+												  {"nvr":"3", "camera":"21"}]},
+        {"item":"廊道攝影機*16", "act":"4", "param":[{"nvr":"1", "camera":"10"}, 
+												  {"nvr":"1", "camera":"11"},
+												  {"nvr":"1", "camera":"12"}, 
+												  {"nvr":"1", "camera":"13"},
+												  {"nvr":"1", "camera":"14"}, 
+												  {"nvr":"1", "camera":"15"},
+												  {"nvr":"1", "camera":"16"}, 
+												  {"nvr":"1", "camera":"17"},
+												  {"nvr":"1", "camera":"18"},
+												  {"nvr":"1", "camera":"19"}, 
+												  {"nvr":"1", "camera":"20"},
+												  {"nvr":"1", "camera":"21"}, 
+												  {"nvr":"1", "camera":"32"},
+												  {"nvr":"1", "camera":"33"}, 
+												  {"nvr":"1", "camera":"34"},
+												  {"nvr":"1", "camera":"35"}]},
+        {"item":"惠賓樓全景", "act":"1", "param":[{"nvr":"1", "camera":"5"}]}, 
+        {"item":"嵩台全景", "act":"1", "param":[{"nvr":"1", "camera":"18"}]}
+    ]},
+    {"id":"2", "name":"坪林", "content":[
+        {"item":"坪林後池*6","act":"3", "param":[{"nvr":"2", "camera":"13"}, 
+												  {"nvr":"2", "camera":"3"},
+												  {"nvr":"2", "camera":"2"}, 
+												  {"nvr":"2", "camera":"5"},
+												  {"nvr":"2", "camera":"17"}, 
+												  {"nvr":"2", "camera":"25"}]}
+    ]},
+    {"id":"3", "name":"沉澱池", "content":[
+        {"item":"沉澱池影像*16","act":"4", "param":[{"nvr":"2", "camera":"36"}, 
+												  {"nvr":"2", "camera":"31"},
+												  {"nvr":"2", "camera":"32"}, 
+												  {"nvr":"2", "camera":"37"},
+												  {"nvr":"2", "camera":"6"}, 
+												  {"nvr":"2", "camera":"57"},
+												  {"nvr":"2", "camera":"44"}, 
+												  {"nvr":"2", "camera":"7"},
+												  {"nvr":"2", "camera":"4"},
+												  {"nvr":"2", "camera":"38"}, 
+												  {"nvr":"2", "camera":"35"},
+												  {"nvr":"2", "camera":"18"}, 
+												  {"nvr":"2", "camera":"75"},
+												  {"nvr":"2", "camera":"16"}, 
+												  {"nvr":"2", "camera":"40"},
+												  {"nvr":"2", "camera":"23"}]},
+		{"item":"沉澱池影像*16","act":"4",  "param":[{"nvr":"2", "camera":"15"}, 
+												  {"nvr":"2", "camera":"8"},
+												  {"nvr":"2", "camera":"51"}, 
+												  {"nvr":"2", "camera":"29"},
+												  {"nvr":"2", "camera":"52"}, 
+												  {"nvr":"2", "camera":"60"},
+												  {"nvr":"2", "camera":"54"}, 
+												  {"nvr":"2", "camera":"20"},
+												  {"nvr":"2", "camera":"9"},
+												  {"nvr":"2", "camera":"19"}, 
+												  {"nvr":"2", "camera":"34"},
+												  {"nvr":"2", "camera":"12"}, 
+												  {"nvr":"2", "camera":"14"},
+												  {"nvr":"2", "camera":"21"}, 
+												  {"nvr":"2", "camera":"22"},
+												  {"nvr":"2", "camera":"24"}]},
+		{"item":"沉澱池影像*6","act":"3",  "param":[{"nvr":"2", "camera":"26"}, 
+												  {"nvr":"2", "camera":"28"},
+												  {"nvr":"2", "camera":"10"}, 
+												  {"nvr":"2", "camera":"33"},
+												  {"nvr":"2", "camera":"62"}, 
+												  {"nvr":"2", "camera":"61"}]} 
+    ]},
+    {"id":"4", "name":"阿姆坪監控站", "content":[
+        {"item":"35X全功能球型","act":"1", "param":[{"nvr":"1", "camera":"24"}]},
+		{"item":"苗圃影像*4","act":"2",  "param":[{"nvr":"2", "camera":"30"}, 
+												  {"nvr":"2", "camera":"27"},
+												  {"nvr":"2", "camera":"53"}, 
+												  {"nvr":"2", "camera":"11"}]}
+    ]},
+	{"id":"5", "name":"東碼頭", "content":[
+        {"item":"DVR連結","act":"10", "param":[{"url":"192.168.95.190"}]}
+    ]},
+    {"id":"6", "name":"第一攔汙索", "content":[
+        {"item":"第一攔汙索影像*4", "act":"10", "param":[{"url":"sm-03.html"}]},
+        {"item":"數位河道全景", "act":"1", "param":[{"nvr":"2", "camera":"42"}]},
+        {"item":"數位球型全景", "act":"1", "param":[{"nvr":"2", "camera":"47"}]}
+    ]},   
+    {"id":"7", "name":"第二攔汙索", "content":[
+        {"item":"第二攔汙索影像*4", "act":"10", "param":[{"url":"sm-03.html"}]},
+        {"item":"數位河道全景", "act":"1", "param":[{"nvr":"2", "camera":"64"}]},
+        {"item":"數位球型全景", "act":"1", "param":[{"nvr":"2", "camera":"70"}]}
+    ]},   
+	{"id":"8", "name":"太平山中繼站", "content":[
+        {"item":"中繼站影像*2", "act":"2", "param":[{"nvr":"1", "camera":"2"}, 
+												  {"nvr":"1", "camera":"3"}]}
+    ]},     
+    {"id":"9", "name":"霞雲中繼站", "content":[
+        {"item":"霞雲中繼站影像*2", "act":"2", "param":[{"nvr":"1", "camera":"4"}, 
+												  {"nvr":"1", "camera":"5"}]}
+    ]},     
+	{"id":"10", "name":"大灣中繼站", "content":[
+        {"item":"大灣中繼站影像*1", "act":"1", "param":[{"nvr":"1", "camera":"6"}]}
+    ]},     
+	{"id":"11", "name":"羅浮清淤場", "content":[
+        {"item":"羅浮清淤場*12", "act":"4",  "param":[{"nvr":"1", "camera":"26"}, 
+												  {"nvr":"1", "camera":"27"},
+												  {"nvr":"1", "camera":"28"}, 
+												  {"nvr":"1", "camera":"45"},
+												  {"nvr":"1", "camera":"46"}, 
+												  {"nvr":"1", "camera":"47"},
+												  {"nvr":"1", "camera":"48"}, 
+												  {"nvr":"1", "camera":"49"},
+												  {"nvr":"1", "camera":"25"},
+												  {"nvr":"1", "camera":"29"}, 
+												  {"nvr":"1", "camera":"30"},
+												  {"nvr":"1", "camera":"31"}]}
+    ]},
+    {"id":"12", "name":"義興發電廠", "content":[
+        {"item":"霞義興發影像*9", "act":"3",  "param":[{"nvr":"1", "camera":"41"}, 
+												  {"nvr":"1", "camera":"42"},
+												  {"nvr":"1", "camera":"43"}, 
+												  {"nvr":"1", "camera":"44"},
+												  {"nvr":"1", "camera":"36"}, 
+												  {"nvr":"1", "camera":"37"},
+												  {"nvr":"1", "camera":"38"}, 
+												  {"nvr":"1", "camera":"39"},
+												  {"nvr":"1", "camera":"40"}]}
+    ]},
+     {"id":"13", "name":"榮華壩", "content":[
+        {"item":"榮華壩影像*5", "act":"3",  "param":[{"nvr":"1", "camera":"9"}, 
+												  {"nvr":"1", "camera":"7"},
+												  {"nvr":"1", "camera":"8"}, 
+												  {"nvr":"1", "camera":"22"},
+												  {"nvr":"1", "camera":"23"}]}
+    ]}
+  ],
+
+  "tree":[
+     {"id":"1", "name":"石門大壩區", "content":[
+        {"item":"大壩環湖全景攝影機*9", "act":"3", "param":[{"nvr":"3", "camera":"2"}, 
+												  {"nvr":"3", "camera":"3"},
+												  {"nvr":"3", "camera":"9"}, 
+												  {"nvr":"3", "camera":"4"},
+												  {"nvr":"3", "camera":"8"}, 
+												  {"nvr":"3", "camera":"7"},
+												  {"nvr":"3", "camera":"17"}, 
+												  {"nvr":"3", "camera":"6"},
+												  {"nvr":"3", "camera":"21"}]},
+        {"item":"大壩全景影像*2", "act":"2", "param":[{"nvr":"1", "camera":"5"}, 
+												  {"nvr":"1", "camera":"18"}]}
+    ]},
+	{"id":"2", "name":"石門大壩停車監看", "content":[
+        {"item":"大壩停車監看*10", "act":"4", "param":[{"nvr":"3", "camera":"15"}, 
+												  {"nvr":"3", "camera":"10"},
+												  {"nvr":"3", "camera":"12"}, 
+												  {"nvr":"3", "camera":"16"},
+												  {"nvr":"3", "camera":"14"}, 
+												  {"nvr":"3", "camera":"11"},
+												  {"nvr":"3", "camera":"19"}, 
+												  {"nvr":"3", "camera":"20"},
+												  {"nvr":"3", "camera":"13"},
+												  {"nvr":"3", "camera":"1"}]},
+        {"item":"大壩全景影像*2", "act":"2", "param":[{"nvr":"1", "camera":"5"}, 
+												  {"nvr":"1", "camera":"18"}]}
+    ]},
+	{"id":"3", "name":"石門大壩廊道", "content":[
+        {"item":"大壩廊道影像*16", "act":"3", "param":[{"nvr":"1", "camera":"10"}, 
+												  {"nvr":"1", "camera":"11"},
+												  {"nvr":"1", "camera":"12"}, 
+												  {"nvr":"1", "camera":"13"},
+												  {"nvr":"1", "camera":"14"}, 
+												  {"nvr":"1", "camera":"15"},
+												  {"nvr":"1", "camera":"16"}, 
+												  {"nvr":"1", "camera":"17"},
+												  {"nvr":"1", "camera":"18"},
+												  {"nvr":"1", "camera":"19"}, 
+												  {"nvr":"1", "camera":"20"},
+												  {"nvr":"1", "camera":"21"}, 
+												  {"nvr":"1", "camera":"32"},
+												  {"nvr":"1", "camera":"33"}, 
+												  {"nvr":"1", "camera":"34"},
+												  {"nvr":"1", "camera":"35"}]},
+        {"item":"大壩全景影像*2", "act":"2", "param":[{"nvr":"1", "camera":"5"}, 
+												  {"nvr":"1", "camera":"18"}]}
+    ]},
+	{"id":"4", "name":"石門大壩停車場", "content":[
+        {"item":"停車場DVR", "act":"10", "param":[{"url":"192.168.95.133"}]}
+    ]},
+    {"id":"5", "name":"第一攔汙索", "content":[
+        {"item":"第一攔浮索DVR","act":"10", "param":[{"url":"192.168.95.10"}]},
+		{"item":"第一攔浮索數位球形攝影機", "act":"1", "param":[{"nvr":"2", "camera":"42"}]},
+        {"item":"第一攔浮索數位固定攝影機", "act":"1", "param":[{"nvr":"2", "camera":"47"}]},
+		{"item":"第一攔汙索燈控","act":"1", "param":[{"url":"192.168.95.10"}]}
+    ]},
+	{"id":"6", "name":"第二攔汙索", "content":[
+        {"item":"第二攔浮索DVR","act":"10", "param":[{"url":"192.168.95.20"}]},
+		{"item":"第二攔浮索數位球形攝影機", "act":"1", "param":[{"nvr":"2", "camera":"64"}]},
+        {"item":"第二攔浮索數位固定攝影機", "act":"1", "param":[{"nvr":"2", "camera":"70"}]},
+		{"item":"第二攔汙索燈控","act":"1", "param":[{"url":"192.168.95.20"}]}
+    ]},
+	{"id":"6", "name":"阿姆坪監控站", "content":[
+        {"item":"數位錄影主機","act":"10", "param":[{"url":"192.168.95.30"}]},
+		{"item":"浮木推30倍攝影機","act":"1", "param":[{"url":"192.168.95.30"}]},
+		{"item":"阿姆坪35X快速球","act":"1", "param":[{"nvr":"1", "camera":"24"}]}
+    ]},
+	{"id":"7", "name":"中繼站機房", "content":[
+        {"item":"太平山中繼站機房影像*2", "act":"2", "param":[{"nvr":"1", "camera":"2"}, 
+																{"nvr":"1", "camera":"3"}]},
+		{"item":"霞雲中繼站機房影像*2","act":"2", "param":[{"nvr":"1", "camera":"4"}, 
+												  {"nvr":"1", "camera":"5"}]},
+		{"item":"大灣中繼站機房影像*1","act":"1", "param":[{"nvr":"1", "camera":"6"}]}
+    ]},
+	{"id":"8", "name":"義興發電廠", "content":[
+        {"item":"義興發電廠DVR", "act":"10", "param":[{"url":"10.56.135.53"}]},
+		{"item":"義興發電廠影像*9", "act":"3",  "param":[{"nvr":"1", "camera":"41"}, 
+												  {"nvr":"1", "camera":"42"},
+												  {"nvr":"1", "camera":"43"}, 
+												  {"nvr":"1", "camera":"44"},
+												  {"nvr":"1", "camera":"36"}, 
+												  {"nvr":"1", "camera":"37"},
+												  {"nvr":"1", "camera":"38"}, 
+												  {"nvr":"1", "camera":"39"},
+												  {"nvr":"1", "camera":"40"}]}
+    ]},
+    {"id":"9", "name":"榮華壩", "content":[
+        {"item":"榮華壩數位錄影機","act":"10", "param":[{"url":"192.168.95.60"}]},
+		{"item":"榮華壩影像*5", "act":"3",  "param":[{"nvr":"1", "camera":"9"}, 
+												  {"nvr":"1", "camera":"7"},
+												  {"nvr":"1", "camera":"8"}, 
+												  {"nvr":"1", "camera":"22"},
+												  {"nvr":"1", "camera":"23"}]},
+        {"item":"旁收1","act":"10", "param":[{"url":"192.168.95.55/?sid=17&cmo=16"}]},
+		{"item":"旁收2","act":"10", "param":[{"url":"192.168.95.55/?sid=17&cmo=17"}]},
+		{"item":"旁收3","act":"10", "param":[{"url":"192.168.95.55/?sid=17&cmo=18"}]}
+    ]},
+	{"id":"9", "name":"坪林後池", "content":[
+        {"item":"坪林警勤室DVR","act":"10", "param":[{"url":"192.168.95.174"}]},
+		{"item":"坪林收費站出口", "act":"1", "param":[{"nvr":"2", "camera":"13"}]},
+        {"item":"桃圳球型", "act":"1", "param":[{"nvr":"2", "camera":"3"}]},
+		{"item":"桃圳出水口", "act":"1", "param":[{"nvr":"2", "camera":"2"}]},
+		{"item":"坪林公園出口", "act":"1", "param":[{"nvr":"2", "camera":"5"}]},
+        {"item":"後池橋頭數位球型", "act":"1", "param":[{"nvr":"2", "camera":"17"}]},
+		{"item":"後池橋頭固定式","act":"1", "param":[{"nvr":"2", "camera":"25"}]}
+    ]},
+	{"id":"10", "name":"束碼頭/苗圃", "content":[
+        {"item":"束碼頭DVR","act":"10", "param":[{"url":"192.168.95.190"}]},
+		{"item":"苗圃數位球型1", "act":"1", "param":[{"nvr":"2", "camera":"30"}]},
+        {"item":"苗圃數位球型2", "act":"1", "param":[{"nvr":"2", "camera":"27"}]},
+		{"item":"苗圃數位固定1", "act":"1", "param":[{"nvr":"2", "camera":"53"}]},
+		{"item":"苗圃數位固定2","act":"1", "param":[{"nvr":"2", "camera":"11"}]}
+    ]},
+	{"id":"11", "name":"沉澱池", "content":[
+        {"item":"沉澱池DVR1", "act":"2", "param":[{"nvr":"1", "camera":"2"}, 
+																{"nvr":"1", "camera":"3"}]},
+		{"item":"沉澱池DVR2","act":"2", "param":[{"nvr":"1", "camera":"4"}, 
+												  {"nvr":"1", "camera":"5"}]},
+		{"item":"沉澱池DVR3","act":"1", "param":[{"nvr":"1", "camera":"6"}]},
+		{"item":"沉澱池影像＿ 周圍","act":"1", "param":[{"nvr":"1", "camera":"6"}]}
+    ]},
+	{"id":"12", "name":"羅浮清淤場", "content":[
+        {"item":"羅浮清淤場影像", "act":"4",  "param":[{"nvr":"1", "camera":"26"}, 
+												  {"nvr":"1", "camera":"27"},
+												  {"nvr":"1", "camera":"28"}, 
+												  {"nvr":"1", "camera":"45"},
+												  {"nvr":"1", "camera":"46"}, 
+												  {"nvr":"1", "camera":"47"},
+												  {"nvr":"1", "camera":"48"}, 
+												  {"nvr":"1", "camera":"49"},
+												  {"nvr":"1", "camera":"25"},
+												  {"nvr":"1", "camera":"29"}, 
+												  {"nvr":"1", "camera":"30"},
+												  {"nvr":"1", "camera":"31"}]}
+    ]},
+	{"id":"13", "name":"電源環境監控", "content":[
+        {"multi":"1", "item":"沉澱池環控電源控制","content":[
+			{"item":"沉澱池環控主機","act":"10", "param":[{"url":"192.168.95.171"}]},
+			{"item":"1號箱電源控制", "act":"10", "param":[{"url":"192.168.95.224"}]},
+			{"item":"2號箱電源控制", "act":"10", "param":[{"url":"192.168.95.225"}]},
+			{"item":"3號箱電源控制", "act":"10", "param":[{"url":"192.168.95.226"}]},
+			{"item":"4號箱電源控制", "act":"10", "param":[{"url":"192.168.95.227"}]},
+			{"item":"5號箱電源控制", "act":"10", "param":[{"url":"192.168.95.228"}]},
+			{"item":"6號箱電源控制", "act":"10", "param":[{"url":"192.168.95.229"}]},
+			{"item":"7號箱電源控制", "act":"10", "param":[{"url":"192.168.95.232"}]},
+			{"item":"8號箱電源控制", "act":"10", "param":[{"url":"192.168.95.233"}]},
+			{"item":"12/13號池後方放流平台", "act":"10", "param":[{"url":"192.168.95.230"}]},
+			{"item":"11號池平台電源控制室","act":"10", "param":[{"url":"192.168.95.231"}]}
+		]},
+		
+		{"item":"太平山環境監看", "act":"10", "param":[{"url":"192.168.95.125"}]},
+        {"item":"太平山電源控制", "act":"10", "param":[{"url":"192.168.95.126"}]},
+		{"item":"霞雲環境監看", "act":"10", "param":[{"url":"192.168.95.123"}]},
+		{"item":"霞雲電源控制","act":"10", "param":[{"url":"192.168.95.124"}]},
+        {"item":"大灣環境監看", "act":"10", "param":[{"url":"192.168.95.121"}]},
+		{"item":"大灣電源控制", "act":"10", "param":[{"url":"192.168.95.122"}]},
+		{"item":"惠賓樓機房", "act":"10", "param":[{"url":"192.168.95.59"}]}
+    ]},
+	{"id":"14", "name":"微波寬頻網路狀態監看", "content":[
+        {"item":"微波寬頻網路狀態監看", "act":"10", "param":[{"url":"192.168.95.57/public"}]}
+    ]}
+  ]
+}

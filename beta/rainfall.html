@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>雨量</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/json2.js"></script>
+	
+	<link rel="stylesheet" href="css/jquery-ui.min.css" />
+	<script src="lib/jquery-ui.min.js"></script>
+  
+	<script type="text/javascript">
+		$(function() {
+			$('#date').datepicker({dateFormat: 'yy-mm-dd', showOn: 'both', showOtherMonths: true, showWeeks: true, firstDay: 1, changeFirstDay: false, buttonImageOnly: true, buttonImage: 'image/calendar.gif'});
+		});
+		
+		function ShowMeDate() {
+			alert(document.querySelector('#date').value);
+		};
+		
+		
+	</script>	
+  </head>
+  <body>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	var infoUrl = "db/rainfall.php?id=-1&date=2";
+			$.ajax({
+	      		url: infoUrl,
+				type: "GET",
+				dataType: "json",
+	      		success: function (response) {
+					//var json_data = {"density":{"Shemen":"17.030000000000001","Clouds":"9.2899999999999991","High":"4.3200000000000003","Bar":"7.3099999999999996","Scrunch":"10.02","Jade":"9.3399999999999999","White":"11.52","Burg":"12.74","West":"14.460000000000001","Mere":"3.9700000000000002"},"hours":[{"InDate":"2015-09-12 01:00:00.000","hour_num":"1","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 02:00:00.000","hour_num":"2","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 03:00:00.000","hour_num":"3","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 04:00:00.000","hour_num":"4","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 05:00:00.000","hour_num":"5","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 06:00:00.000","hour_num":"6","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 07:00:00.000","hour_num":"7","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 08:00:00.000","hour_num":"8","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 09:00:00.000","hour_num":"9","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 10:00:00.000","hour_num":"10","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 11:00:00.000","hour_num":"11","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 12:00:00.000","hour_num":"12","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 13:00:00.000","hour_num":"13","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 14:00:00.000","hour_num":"14","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 15:00:00.000","hour_num":"15","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 16:00:00.000","hour_num":"16","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 17:00:00.000","hour_num":"17","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"1.0","avg_rain":0.1,"avg_weight":0},{"InDate":"2015-09-12 18:00:00.000","hour_num":"18","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"1.0","avg_rain":0.1,"avg_weight":0},{"InDate":"2015-09-12 19:00:00.000","hour_num":"19","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 20:00:00.000","hour_num":"20","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"2.0","avg_rain":0.2,"avg_weight":0.1},{"InDate":"2015-09-12 21:00:00.000","hour_num":"21","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 22:00:00.000","hour_num":"22","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 23:00:00.000","hour_num":"23","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-13 00:00:00.000","hour_num":"0","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0}],"sum":{"Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"4.0","avg_rain":0.4,"avg_weight":0.2}};
+					var json_data = response;
+					var titleName = ["日期", "時間", "石門", "霞雲", "高義", "巴陵", "嘎拉賀", "玉峰", "白石", "鎮西堡", "西丘斯山", "池端", "加權平均", "算術平均"];
+					var location = ["Shemen", "Clouds", "High", "Bar", "Scrunch", "Jade", "White", "Burg", "West", "Mere"];
+					var newLocation = ["Shemen", "Clouds", "High", "Bar", "Scrunch", "Jade", "White", "Burg", "West", "Mere", "avg_rain", "avg_weight"];
+					
+					var info = "<table class='table table-striped table-bordered'><tbody>";
+					
+					info += "<tr class='active'>"
+					for (var i = 0; i < titleName.length; i++) {
+						info += "<td style='font-weight:bold;'>" + titleName[i]+ "</td>";
+					}
+					info += "</tr>";
+					// print 徐昇式法權重
+					info += "<tr class='success'><td style='font-weight:bold;'>徐昇式法權重</td><td></td>";
+					for (var i = 0; i < location.length; i++) {
+						info += "<td style='font-weight:bold;'>" + json_data["density"][location[i]].substring(0, 4)+ "</td>";
+					}
+					info += "<td></td><td></td></tr>";
+					
+					// each hours
+					for (var i = 0; i < json_data["hours"].length; i++) {
+						info += "<tr class='info'><td style='font-weight:bold;'>" + json_data["hours"][i]["InDate"].substring(0, 11) + "</td><td style='font-weight:bold;'>" + json_data["hours"][i]["hour_num"] + "</td>";
+						for (var j = 0; j < newLocation.length; j++) {
+							info += "<td style='font-weight:bold;'>" + json_data["hours"][i][newLocation[j]]+ "</td>";
+						}
+						info += "</tr>";
+					}
+					
+					// 累積雨量
+					info += "<tr class='danger'><td style='font-weight:bold;'>累積雨量</td><td></td>";
+					for (var k = 0; k < newLocation.length; k++) {
+						info += "<td style='font-weight:bold;'>" + json_data["sum"][newLocation[k]] + "</td>";
+					}
+					info += "</tr>";
+					
+					info += "</tbody></table>";
+					$("#infoTable").append(info);
+					
+					$("#loading").hide();
+	      		},
+	        	error: function () {
+	        		alert("Error!");
+	      		}
+	  		});
+			
+		});
+	
+	</script>
+	
+	<div class="webHeader">
+          <img src="image/banner.png"/>
+    </div>
+	
+	<div class="queryData">
+          日期：<input type="text" id="date"/>
+		  <button type="button" class="btn btn-primary btn-sm" id="startQuery" onclick="ShowMeDate()">查詢</button>
+    </div>
+	
+	<div class="loadingIcon" id="loading">
+		<img src ='image/loading_icon.gif'/>
+	</div>
+	
+	<div class="webHeader">
+		<div id="infoTable">
+		</div>
+	</div>
+  </body>
+</html>

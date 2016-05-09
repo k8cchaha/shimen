@@ -1,0 +1,6 @@
+{
+    "account": [
+        {"name": "admin", "pass":"justyou168"},
+        {"name": "test", "pass":"test"}
+    ]
+}

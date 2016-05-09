@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>準眼機防</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/json2.js"></script>
+	
+	<link rel="stylesheet" href="css/jquery-ui.min.css" />
+	<script src="lib/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript">
+
+	</script>
+  </head>
+  <body>
+	<script type="text/javascript">
+	$(document).ready(function() {
+	var infoUrl = "eye/eyefalcon.php?id=-1";
+			$.ajax({
+	      		url: infoUrl,
+				type: "GET",
+				dataType: "json",
+	      		success: function (response) {
+					//var json_data = [{"name":"惠賓樓","lastTime":"2016\/05\/08 14:05:23","value":"惠賓樓環境溫度:35.60 惠賓樓環境濕度:42.80 惠賓樓市電電壓:122.20 惠賓樓UPS輸出電壓:111.40","temperature":"35.60","humid":"42.80","di":"122.20","do_out":"111.40"},{"name":"沉澱池","lastTime":"2016\/05\/08 14:05:23","value":"沉澱池環境溫度:24.90 沉澱池環境濕度:46.70 沉澱池市電電壓:115.60 沉澱池UPS輸出電壓:114.20","temperature":"24.90","humid":"46.70","di":"115.60","do_out":"114.20"},{"name":"大灣","lastTime":"2016\/05\/08 14:05:23","value":"大灣環境溫度:26.50 大灣環境濕度:84.30 大灣市電電壓:110.90 大灣UPS輸出電壓:0.00","temperature":"26.50","humid":"84.30","di":"110.90","do_out":"0.00"},{"name":"霞雲","lastTime":"2016\/05\/08 14:05:23","value":"霞雲環境溫度:21.80 霞雲環境濕度:77.90 霞雲市電電壓:109.00 霞雲UPS輸出電壓:106.20","temperature":"21.80","humid":"77.90","di":"109.00","do_out":"106.20"},{"name":"太平山","lastTime":"2016\/05\/08 14:05:23","value":"太平山環境溫度:21.00 太平山環境濕度:59.90 太平山市電電壓:101.50 太平山UPS輸出電壓:105.70","temperature":"21.00","humid":"59.90","di":"101.50","do_out":"105.70"}];
+					var json_data = response;
+					
+					var titleName = ["溫度", "濕度", "市電電壓", "UPS輸出電壓"];
+					var contentName = ["temperature", "humid", "di", "do_out"];
+					
+					var info = "<table class='table table-striped table-bordered'><tbody>";
+					info += "<tr class='active'><td></td>"
+					for (var i = 0; i < json_data.length; i++) {
+						info += "<td style='font-weight:bold;'>" + json_data[i]['name']+ "</td>";
+					}
+					info += "</tr>"
+					
+					
+					
+					for (var j = 0; j < titleName.length; j++) {
+						info += "<tr class='success'>";
+						info += "<td style='font-weight:bold;'>" + titleName[j]+ "</td>";
+							for (var i = 0; i < json_data.length; i++) {	
+								info += "<td style='font-weight:bold;'>" + json_data[i][contentName[j]]+ "</td>";
+						}
+						info += "</tr>";
+						
+					}
+					info += "</tr>"
+					
+					info += "</tbody></table>";
+					
+					
+					$("#infoTable").append(info);
+					
+					$("#loading").hide();
+	      		},
+	        	error: function () {
+	        		alert("Error!");
+	      		}
+	  		});
+			
+		});
+	</script>	
+	<div class="webHeader">
+          <img src="image/banner.png"/>
+    </div>
+	
+	<div class="loadingIcon" id="loading">
+		<img src ='image/loading_icon.gif'/>
+	</div>
+	
+	<div class="webHeader">
+		<div id="infoTable">
+		</div>
+	</div>
+  </body>
+</html>

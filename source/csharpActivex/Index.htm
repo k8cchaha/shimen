@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //插件安装成功之后，就可以使用这种方式进行检测
+        function test() {
+            try {
+                var test = new ActiveXObject("MyTestCsharpActiveX");
+                if (test == undefined)
+                { alert("underfined");return false; }
+                else
+                { return true; }
+            }
+            catch (e) {
+			alert("exception");
+			alert(e.message);
+                return false;
+            }
+        };
+		
+		function Activexstart()
+		{
+			try {
+                var test = new ActiveXObject("MyTestCsharpActiveX");
+                if (test == undefined)
+                { alert("underfined");return false; }
+                else
+                { 
+				alert("Create");
+				test.ShowWindow();
+				return true; }
+            }
+            catch (e) {
+			alert("exception");
+			alert(e.message);
+                return false;
+            }
+		};
+		
+		function SayHello()
+		{
+			try {
+                var test = new ActiveXObject("MyTestCsharpActiveX");
+                if (test == undefined)
+                { alert("underfined");return false; }
+                else
+                { 
+				//alert("SayHello");
+				alert(test.SayHello());
+				return true; }
+            }
+            catch (e) {
+			alert("exception");
+			alert(e.message);
+                return false;
+            }
+		};
+    </script>
+</head>
+<body onload="test();">
+    <object classid="CLSID:6E591306-0986-4C00-AE3E-E7E03371A41C" id="abc" width="1008px" height="670px"></object>
+    <input type="button" value="测试" onclick="Activexstart();" />
+	<input type="button" value="Hello" onclick="SayHello();" />
+</body>
+</html>

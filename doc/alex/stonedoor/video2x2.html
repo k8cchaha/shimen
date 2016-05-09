@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video2x2</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		function connect(video)
+		{
+			try
+		    {
+		    	var videoSelect;
+		    	var activeXList = [];
+
+		    	activeXList.push(MyActiveX1);
+		    	activeXList.push(MyActiveX2);
+		    	activeXList.push(MyActiveX3);
+		    	activeXList.push(MyActiveX4);
+
+		    	for (var i = 0; i < activeXList.length; i++) {
+		    		if (video['port'][i] !== undefined) {
+		    			activeXList[i].TestMyMethod(
+		    				video['ip'], 
+			    			video['port'][i],
+			    			video['account'],
+			    			video['password']);
+		    		} else {
+		    			videoSelect = "#video" + (i+1);
+		    			$(videoSelect).hide();
+		    		}
+		    	}
+		    }
+			catch(e)
+			{
+				alert(e.message);
+			}
+		}
+	</script>
+</head>
+<body>
+	<div style="position:relative;">
+		<div style="position:absolute; left: 10px; top: 10px" id="video1">
+			<OBJECT ID="MyActiveX1" WIDTH=480 HEIGHT=320
+			 CLASSID="CLSID:36299202-09EF-4ABF-ADB9-47C599DBE778" >
+			    <!--PARAM NAME="_Version" VALUE="65536">
+			    <PARAM NAME="_ExtentX" VALUE="2646">
+			    <PARAM NAME="_ExtentY" VALUE="1323">
+			    <PARAM NAME="_StockProps" VALUE="0"-->
+			</OBJECT>
+		</div>
+		<div style="position:absolute; left: 500px; top: 10px" id="video2">
+			<OBJECT ID="MyActiveX2" WIDTH=480 HEIGHT=320
+			 CLASSID="CLSID:36299202-09EF-4ABF-ADB9-47C599DBE778" >
+			    <!--PARAM NAME="_Version" VALUE="65536">
+			    <PARAM NAME="_ExtentX" VALUE="2646">
+			    <PARAM NAME="_ExtentY" VALUE="1323">
+			    <PARAM NAME="_StockProps" VALUE="0"-->
+			</OBJECT>
+		</div>
+		<div style="position:absolute; left: 10px; top: 340px" id="video3">
+			<OBJECT ID="MyActiveX3" WIDTH=480 HEIGHT=320
+			 CLASSID="CLSID:36299202-09EF-4ABF-ADB9-47C599DBE778" >
+			    <!--PARAM NAME="_Version" VALUE="65536">
+			    <PARAM NAME="_ExtentX" VALUE="2646">
+			    <PARAM NAME="_ExtentY" VALUE="1323">
+			    <PARAM NAME="_StockProps" VALUE="0"-->
+			</OBJECT>
+		</div>
+		<div style="position:absolute; left: 500px; top: 340px" id="video4">
+			<OBJECT ID="MyActiveX4" WIDTH=480 HEIGHT=320
+			 CLASSID="CLSID:36299202-09EF-4ABF-ADB9-47C599DBE778" >
+			    <!--PARAM NAME="_Version" VALUE="65536">
+			    <PARAM NAME="_ExtentX" VALUE="2646">
+			    <PARAM NAME="_ExtentY" VALUE="1323">
+			    <PARAM NAME="_StockProps" VALUE="0"-->
+			</OBJECT>
+		</div>
+	</div>
+</body>
+</html>

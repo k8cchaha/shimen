@@ -1,0 +1,14 @@
+.ptz {
+    position: relative;
+}
+
+.ptz img {
+    position: absolute;
+    width: 45px;
+    height: 45px; 
+    opacity: 0.8;
+}
+
+.ptz img:hover {
+    opacity: 1;
+}

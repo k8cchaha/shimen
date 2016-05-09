@@ -1,0 +1,322 @@
+.serverNav > div {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.serverNav ul {
+    list-style-type: none;
+    padding-left: 35px;
+}
+
+.serverNav ul ul {
+    padding-left: 30px;
+}
+
+.serverNav ul ul li{
+    padding-bottom: 5px;
+}
+
+.serverNav ul ul li span{
+    font-size: 12px;
+}
+
+a {
+	text-decoration:none;
+}
+
+#loginWnd {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+#loginWnd img {
+    margin-left: 30px;
+}
+
+.errMsg {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#mainWnd {
+    background-color: #eee;
+}
+
+.webMain {
+    position: relative;
+    width: 1200px;
+    padding: 0;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 3;
+}
+
+.webHeader {
+    position: relative;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.webHeader img {
+    width: 100%;
+    height: 100%;
+}
+
+.queryData {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.loadingIcon {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.loadingIcon img {
+    width: 100%;
+    height: 100%;
+}
+
+.mainTitle {
+    position: absolute;
+    top: 25px;
+    left: 600px;
+    color: red;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+.logout {
+    position: absolute;
+    top: 70px;
+    right:20px;
+    color: white;
+}
+
+.logout:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.webContent {
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+
+.webFooter {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    clear: both;
+}
+
+.webFooter div {
+	text-align: right;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.webFooter div span {
+    margin-right: 30px;
+}
+
+.serverNav {
+    width: 280px;
+    height: 770px;
+    background-color: #eee;
+    overflow-y: auto;
+}
+
+.devAction {
+
+}
+
+.devAction:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+.mapSize {
+    width: 910px;
+    height: 500px;
+    overflow: auto;
+}
+
+.webMap {
+	position: relative;
+    background-image: url("../image/newmap.jpg");
+    width: 1056px;
+    height: 708px;
+}
+
+.webMap img {
+	position: absolute;
+}
+
+.tableInfo {
+    width: 910px;
+    height: 270px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tableInfo tr {
+    white-space: nowrap;
+}
+
+.folderIcon {
+    width: 35px;
+    height: 35px;
+    opacity: 0.8;
+}
+
+.folderIcon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.nvrIcon {
+    width: 35px;
+    height: 35px;
+    opacity: 0.8;
+}
+
+.nvrIcon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.cameraIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+
+.cameraIcon:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.dvrIcon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    opacity: 0.8;
+}
+
+.dvrIcon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.utilityIcon {
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+.utilityIcon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.siteTitle {
+    position: absolute;
+    color: white;
+    border-color: red;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+    background-color: red;
+    padding: 7px 5px 7px 5px;
+}
+
+#siteMenu {
+	position: absolute;
+    color: white;
+	border-color: red;
+	background-color: red;
+    padding: 7px 5px 3px 5px;
+	z-index: 7;
+}
+#siteMenu span:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+#siteMenu div {
+    background-color: #eee;
+    color: black;
+    margin-top: 5px;
+    margin-left: -2px;
+    margin-right: -2px;
+    padding: 5px;
+}
+
+.point {
+    width:45px;
+    height:45px;
+    opacity: 0.8;
+    z-index: 6;
+}
+
+.point:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.webBg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: 1;
+	background-color: white;
+}
+
+.border {
+    border-color: darkgrey;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.paddingTop5 {
+    padding-top: 5px;
+}
+
+.mask {
+	position: absolute;
+	width:100%;
+	height:100%;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+}

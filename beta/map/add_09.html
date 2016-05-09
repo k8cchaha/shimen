@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>全功能球機燈控平台組</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+	<script src="Scripts/jquery-1.3.2.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function StartPreview(){
+	var m_Url1 = "rtsp://192.168.95.55/192.168.95.18:8000:HIK-DS8000HC:0:0:admin:12345/av_stream";
+	var SSOCX = document.getElementById("StreamServerOCX1");
+	SSOCX.SSXStartRealPlay(m_Url1,0);
+}
+
+    
+    function PTZ_START(f,s){
+    	var SSOCX;
+		SSOCX = document.getElementById("StreamServerOCX1");
+        SSOCX.SSXPTZControl(f,1,s);
+    }
+    
+    function PTZ_STOP(f,s){
+    	var SSOCX;
+		SSOCX = document.getElementById("StreamServerOCX1");
+        SSOCX.SSXPTZControl(f,0,s);
+    }	
+var UserID	
+function Play()
+{
+	var Netocx = document.getElementById("NetOCX");
+	UserID = Netocx.Login("192.168.95.19",8000,"admin","12345");
+	Netocx.StartRealPlay(0 ,0, 0);  
+}
+
+function PTZCStart(f,s)
+{
+	var Netocx = document.getElementById("NetOCX");
+	Netocx.PTZCtrlStart(f,s);
+	
+}function PTZCStop(f,s)
+{
+	var Netocx = document.getElementById("NetOCX");
+	Netocx.PTZCtrlStop(f,s);
+}
+
+function CamAlarm(flag)
+{
+	var Netocx = document.getElementById("NetOCX");
+	Netocx.ControlAlarmOut(0,flag);
+	if (flag==1){
+		document.getElementById('lightbtn1').onclick=function(){CamAlarm(0)};
+		$("#lightbtn1").val("開啟中");
+		}
+	else{
+		document.getElementById('lightbtn1').onclick=function(){CamAlarm(1)};
+		$("#lightbtn1").val("關閉中");
+	}	
+}
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {	// JQuery Document Ready
+		StartPreview();
+		Play();
+	});
+</script>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style></head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+<table width="200" border="1" align="center">
+  <tr>
+    <td><object classid="clsid:D2408CF8-AE16-4737-89CE-72A9C4D2F30C" codebase="../codebase/StreamServerOCX.cab#version=1,0,0,4" 
+      standby="Waiting..." id="StreamServerOCX1" width="560" height="400" name="StreamServerOCX1" align="center">
+    </object></td>
+  </tr>
+  <tr>
+  	<td align="center">
+    	<table border="1" cellpadding="3" cellspacing="3">
+        	<tr>
+           	  <td colspan="2" align="center">球機 PTZ</td>
+                <td width="50"></td>
+            	<td colspan="2" align="center">燈具 PTZ</td>
+            </tr>    
+        	<tr>
+            	<td width="100">
+                	<table cellpadding="3" cellspacing="3">
+                    	<tr>
+                        	<td></td>
+                            <td><input id="upbtn1" type="button" value="上" onmousedown="PTZ_START(0,0)" onmouseup="PTZ_STOP(0,0)"></td>
+                            <td></td>
+                        </tr>
+                    	<tr>
+                       	  <td><input id="leftbtn1" type="button" value="左" onmousedown="PTZ_START(2,0)" onmouseup="PTZ_STOP(2,0)"></td>
+                            <td></td>
+                          <td><input id="rightbtn1" type="button" value="右" onmousedown="PTZ_START(3,0)" onmouseup="PTZ_STOP(3,0)"></td>
+                        </tr>
+                    	<tr>
+                        	<td></td>
+                            <td><input id="downbtn1" type="button" value="下" onmousedown="PTZ_START(1,0)" onmouseup="PTZ_STOP(1,0)"></td>
+                            <td></td>
+                        </tr>
+               	  </table>                </td>
+           	  <td width="100">
+               	<table width="100" cellpadding="2" cellspacing="2">
+<tr>
+                       	  <td><input id="fbtn1" type="button" value="＋" onmousedown="PTZ_START(9,0);" onmouseup="PTZ_STOP(9,0);"></td>
+                            <td>焦距</td>
+                            <td><input id="fbtn2" type="button" value="－" onmousedown="PTZ_START(10,0);" onmouseup="PTZ_STOP(10,0);"></td>
+                        </tr>
+                    	<tr>
+                        	<td><input id="fbtn3" type="button" value="＋" onmousedown="PTZ_START(11,0);" onmouseup="PTZ_STOP(11,0);"></td>
+                          <td>焦點</td>
+                            <td><input id="fbtn4" type="button" value="－" onmousedown="PTZ_START(12,0);" onmouseup="PTZ_STOP(12,0);"></td>
+                        </tr>
+               	</table>              </td>
+                <td width="50"></td>
+                <td width="103">
+                	<table cellpadding="3" cellspacing="3">
+       	  <tr>
+                        	<td></td>
+                            <td><input id="upbtn1" type="button" value="上" onmousedown="PTZCStart(0,0)" onmouseup="PTZCStop(0,0)"></td>
+                            <td></td>
+                        </tr>
+                    	<tr>
+                        	<td><input id="leftbtn1" type="button" value="左" onmousedown="PTZCStart(2,0)" onmouseup="PTZCStop(2,0)"></td>
+                            <td></td>
+                            <td><input id="rightbtn1" type="button" value="右" onmousedown="PTZCStart(3,0)" onmouseup="PTZCStop(3,0)"></td>
+                        </tr>
+                    	<tr>
+                        	<td></td>
+                            <td><input id="downbtn1" type="button" value="下" onmousedown="PTZCStart(1,0)" onmouseup="PTZCStop(1,0)"></td>
+                            <td></td>
+                        </tr>
+                	</table>              </td>
+            	<td width="55">
+                <object classid="clsid:1FB5A5AA-3750-421C-BEA3-6E52FC5F7843" 
+                codebase="../codebase/NetVideoActivex.cab#version=1,1,1,5" 
+                standby="Waiting..." id="NetOCX" width="0" height="0" name="ocx" align="center"></object>
+  				<input id="lightbtn1" type="button" value="關閉中" onclick="CamAlarm(1)">
+                </td>
+            </tr>
+        </table>    </td>
+  </tr>  
+</table>
+
+</form>
+</body>
+</html>

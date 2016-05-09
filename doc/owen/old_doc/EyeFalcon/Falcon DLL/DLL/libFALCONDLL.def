@@ -1,0 +1,10 @@
+; dlltool --base-file C:\Users\TOPTECH\AppData\Local\Temp/cca08800.base --output-exp FALCONDLL.exp --dllname FALCONDLL.dll --output-def libFALCONDLL.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\Users\TOPTECH\AppData\Local\Temp/cca08800.def --output-lib libFALCONDLL.a
+EXPORTS
+;	ServerStart(char const*)
+	_Z11ServerStartPKc @ 1
+;	Hi()
+	_Z2Hiv @ 2
+;	GetIR(char const*, unsigned char*, int&)
+	_Z5GetIRPKcPhRi @ 3
+;	Helloworld()
+	_Z10Helloworldv @ 4

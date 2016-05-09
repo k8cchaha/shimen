@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>地震儀</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/json2.js"></script>
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function() {
+	var infoUrl = "db/earthquake.php?id=-1";
+			$.ajax({
+	      		url: infoUrl,
+				type: "GET",
+				dataType: "json",
+	      		success: function (response) {
+					var info = "<table class='table table-striped'>";
+					info += "<tr><td>儀器狀態</td><td>儀器名稱</td><td>最後更新</td><td>最大加速度</td><td>最大震度</td></tr>";
+					for (var i = 0; i < response.length; i++) {
+						if (i % 2 === 0) {
+							info += "<tr class='active'>";
+						} else {
+							info += "<tr class='info'>";
+						}
+						info += "<td>" + response[i].status + "</td><td>" +  response[i].name + "</td><td>" +  response[i].lastTime + "</td><td>" + response[i].value + "</td><td>4</td></tr>";
+					}
+					info += "</table>";
+					$("#infoTable").append(info);
+	      		},
+	        	error: function () {
+	        		alert("Error!");
+	      		}
+	  		});
+			
+		});
+	</script>
+  </head>
+  <body>
+	<div class="webHeader">
+          <img src="image/banner.png"/>
+    </div>
+	<div class="webHeader">
+		<div class="infoGraph" style="float:left; width: 750px">
+			<img src="image/earthquake.png" class="img-responsive" alt="Responsive image">
+		</div>
+		<div id="infoTable" style="float:left; width: 450px">
+		
+		</div>
+	</div>
+  </body>
+</html>

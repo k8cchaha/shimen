@@ -1,0 +1,422 @@
+{
+    "point": [{
+        "id": "point1",
+        "name": "石門壩區",
+        "pos": {
+            "x": 230,
+            "y": 180
+        },
+        "menu_pos": {
+            "x": 270,
+            "y": 180
+        },
+        "content": [{
+            "name": "環湖影像9分割",
+            "actList": [{
+                    "act": "3",
+                    "param": [{ "nvr": "3", "camera": "2" },
+                        { "nvr": "3", "camera": "3" },
+                        { "nvr": "3", "camera": "9" },
+                        { "nvr": "3", "camera": "4" },
+                        { "nvr": "3", "camera": "8" },
+                        { "nvr": "3", "camera": "7" },
+                        { "nvr": "3", "camera": "17" },
+                        { "nvr": "3", "camera": "6" },
+                        { "nvr": "3", "camera": "21" }
+                    ]
+                }, { "act": "7", 
+                     "param": [ { "id": "0"}] 
+                }, { "act": "11", 
+                     "param": [ { "id": "0"}]  
+                }
+            ]
+        }, {
+            "name": "廊道攝影機16分割",
+            "actList": [{
+                "act": "4",
+                "param": [{ "nvr": "1", "camera": "10" },
+                    { "nvr": "1", "camera": "11" },
+                    { "nvr": "1", "camera": "12" },
+                    { "nvr": "1", "camera": "13" },
+                    { "nvr": "1", "camera": "14" },
+                    { "nvr": "1", "camera": "15" },
+                    { "nvr": "1", "camera": "16" },
+                    { "nvr": "1", "camera": "17" },
+                    { "nvr": "1", "camera": "18" },
+                    { "nvr": "1", "camera": "19" },
+                    { "nvr": "1", "camera": "20" },
+                    { "nvr": "1", "camera": "21" },
+                    { "nvr": "1", "camera": "32" },
+                    { "nvr": "1", "camera": "33" },
+                    { "nvr": "1", "camera": "34" },
+                    { "nvr": "1", "camera": "35" }
+                ]
+            }]
+        }, {
+            "name": "惠賓樓全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "1", "camera": "5" }]
+            }]
+        }, {
+            "name": "嵩台全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "1", "camera": "18" }]
+            }]
+        }]
+    }, {
+        "id": "point2",
+        "name": "坪林",
+        "pos": {
+            "x": 300,
+            "y": 120
+        },
+        "menu_pos": {
+            "x": 340,
+            "y": 120
+        },
+        "content": [{
+            "name": "坪林後池9分割",
+            "actList": [{
+                "act": "3",
+                "param": [{ "nvr": "2", "camera": "13" },
+                    { "nvr": "2", "camera": "3" },
+                    { "nvr": "2", "camera": "2" },
+                    { "nvr": "2", "camera": "5" },
+                    { "nvr": "2", "camera": "17" },
+                    { "nvr": "2", "camera": "25" }
+                ]
+            }]
+
+        }]
+    }, {
+        "id": "point3",
+        "name": "沉澱池",
+        "pos": {
+            "x": 370,
+            "y": 70
+        },
+        "menu_pos": {
+            "x": 410,
+            "y": 70
+        },
+        "content": [{
+            "name": "沉澱池影像16分割",
+            "actList": [{
+                "act": "4",
+                "param": [{ "nvr": "2", "camera": "36" },
+                    { "nvr": "2", "camera": "31" },
+                    { "nvr": "2", "camera": "32" },
+                    { "nvr": "2", "camera": "37" },
+                    { "nvr": "2", "camera": "6" },
+                    { "nvr": "2", "camera": "57" },
+                    { "nvr": "2", "camera": "44" },
+                    { "nvr": "2", "camera": "7" },
+                    { "nvr": "2", "camera": "4" },
+                    { "nvr": "2", "camera": "38" },
+                    { "nvr": "2", "camera": "35" },
+                    { "nvr": "2", "camera": "18" },
+                    { "nvr": "2", "camera": "75" },
+                    { "nvr": "2", "camera": "16" },
+                    { "nvr": "2", "camera": "40" },
+                    { "nvr": "2", "camera": "23" }
+                ]
+            }, {
+                "act": "11", "param": [ { "id": "1"}]
+            }]
+        }, {
+            "name": "沉澱池影像16分割",
+            "actList": [{
+                    "act": "4",
+                    "param": [{ "nvr": "2", "camera": "15" },
+                        { "nvr": "2", "camera": "8" },
+                        { "nvr": "2", "camera": "51" },
+                        { "nvr": "2", "camera": "29" },
+                        { "nvr": "2", "camera": "52" },
+                        { "nvr": "2", "camera": "60" },
+                        { "nvr": "2", "camera": "54" },
+                        { "nvr": "2", "camera": "20" },
+                        { "nvr": "2", "camera": "9" },
+                        { "nvr": "2", "camera": "19" },
+                        { "nvr": "2", "camera": "34" },
+                        { "nvr": "2", "camera": "12" },
+                        { "nvr": "2", "camera": "14" },
+                        { "nvr": "2", "camera": "21" },
+                        { "nvr": "2", "camera": "22" },
+                        { "nvr": "2", "camera": "24" }
+                    ]
+                },
+                { "act": "11", 
+                  "param": [ { "id": "1"}] 
+                }
+            ]
+        }, {
+            "name": "沉澱池影像16分割",
+            "actList": [{
+                    "act": "4",
+                    "param": [{ "nvr": "2", "camera": "26" },
+                        { "nvr": "2", "camera": "28" },
+                        { "nvr": "2", "camera": "10" },
+                        { "nvr": "2", "camera": "33" },
+                        { "nvr": "2", "camera": "62" },
+                        { "nvr": "2", "camera": "61" }
+                    ]
+                },
+                { "act": "11", "param": [ { "id": "1"}] }
+            ]
+        }]
+    }, {
+        "id": "point4",
+        "name": "阿姆坪監控站",
+        "pos": {
+            "x": 540,
+            "y": 170
+        },
+        "menu_pos": {
+            "x": 451,
+            "y": 170
+        },
+        "content": [{
+            "name": "35X全功能球型",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "1", "camera": "24" }]
+            }]
+
+        }, {
+            "name": "苗圃影像4分割",
+            "actList": [{
+                "act": "2",
+                "param": [{ "nvr": "2", "camera": "30" },
+                    { "nvr": "2", "camera": "27" },
+                    { "nvr": "2", "camera": "53" },
+                    { "nvr": "2", "camera": "11" }
+                ]
+            }]
+        }]
+    }, {
+        "id": "point5",
+        "name": "東碼頭",
+        "pos": {
+            "x": 580,
+            "y": 150
+        },
+        "menu_pos": {
+            "x": 620,
+            "y": 150
+        },
+        "content": [{
+            "name": "DVR連結",
+            "actList": [{
+                "act": "10",
+                "param": [{ "url": "http://192.168.95.190" }]
+            }]
+        }]
+    }, {
+        "id": "point6",
+        "name": "第一攔汙索",
+        "pos": {
+            "x": 605,
+            "y": 240
+        },
+        "menu_pos": {
+            "x": 529,
+            "y": 240
+        },
+        "content": [{
+            "name": "第一攔汙索影像4分割",
+            "actList": [{
+                "act": "10",
+                "param": [{ "url": "map/sm-03.html" }]
+            }]
+        }, {
+            "name": "數位河道全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "2", "camera": "42" }]
+            }]
+        }, {
+            "name": "數位球型全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "2", "camera": "47" }]
+            }]
+        }]
+    }, {
+        "id": "point7",
+        "name": "第二攔汙索",
+        "pos": {
+            "x": 730,
+            "y": 260
+        },
+        "menu_pos": {
+            "x": 770,
+            "y": 260
+        },
+        "content": [{
+            "name": "第二攔汙索影像4分割",
+            "actList": [{
+                "act": "10",
+                "param": [{ "url": "map/sm-04.html" }]
+            }]
+        }, {
+            "name": "數位河道全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "2", "camera": "64" }]
+            }]
+        }, {
+            "name": "數位球型全景",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "2", "camera": "70" }]
+            }]
+        }]
+    }, {
+        "id": "point8",
+        "name": "太平山中繼站",
+        "pos": {
+            "x": 160,
+            "y": 150
+        },
+        "menu_pos": {
+            "x": 68,
+            "y": 150
+        },
+        "content": [{
+            "name": "中繼站影像4分割",
+            "actList": [{
+                    "act": "2",
+                    "param": [{ "nvr": "1", "camera": "2" },
+                        { "nvr": "1", "camera": "3" }
+                    ]
+                },
+                { "act": "11", "param": [ { "id": "1"}] }
+            ]
+        }]
+    }, {
+        "id": "point9",
+        "name": "霞雲中繼站",
+        "pos": {
+            "x": 900,
+            "y": 65
+        },
+        "menu_pos": {
+            "x": 822,
+            "y": 65
+        },
+        "content": [{
+            "name": "霞雲中繼站影像2分割",
+            "actList": [{
+                    "act": "2",
+                    "param": [{ "nvr": "1", "camera": "4" },
+                        { "nvr": "1", "camera": "5" }
+                    ]
+                },
+                { "act": "11", "param": [ { "id": "1"}] }
+            ]
+        }]
+    }, {
+        "id": "point10",
+        "name": "大灣中繼站",
+        "pos": {
+            "x": 815,
+            "y": 555
+        },
+        "menu_pos": {
+            "x": 855,
+            "y": 555
+        },
+        "content": [{
+            "name": "大灣中繼站影像1分割",
+            "actList": [{
+                "act": "1",
+                "param": [{ "nvr": "1", "camera": "6" }]
+            }, { "act": "11", "param": [ { "id": "1"}] }]
+        }]
+    }, {
+        "id": "point11",
+        "name": "羅浮清淤場",
+        "pos": {
+            "x": 880,
+            "y": 250
+        },
+        "menu_pos": {
+            "x": 920,
+            "y": 250
+        },
+        "content": [{
+            "name": "羅浮清淤場12分割",
+            "actList": [{
+                "act": "4",
+                "param": [{ "nvr": "1", "camera": "26" },
+                    { "nvr": "1", "camera": "27" },
+                    { "nvr": "1", "camera": "28" },
+                    { "nvr": "1", "camera": "45" },
+                    { "nvr": "1", "camera": "46" },
+                    { "nvr": "1", "camera": "47" },
+                    { "nvr": "1", "camera": "48" },
+                    { "nvr": "1", "camera": "49" },
+                    { "nvr": "1", "camera": "25" },
+                    { "nvr": "1", "camera": "29" },
+                    { "nvr": "1", "camera": "30" },
+                    { "nvr": "1", "camera": "31" }
+                ]
+            }]
+
+        }]
+    }, {
+        "id": "point12",
+        "name": "義興發電廠",
+        "pos": {
+            "x": 880,
+            "y": 400
+        },
+        "menu_pos": {
+            "x": 920,
+            "y": 400
+        },
+        "content": [{
+            "name": "霞義興發影像9分割",
+            "actList": [{
+                "act": "3",
+                "param": [{ "nvr": "1", "camera": "41" },
+                    { "nvr": "1", "camera": "42" },
+                    { "nvr": "1", "camera": "43" },
+                    { "nvr": "1", "camera": "44" },
+                    { "nvr": "1", "camera": "36" },
+                    { "nvr": "1", "camera": "37" },
+                    { "nvr": "1", "camera": "38" },
+                    { "nvr": "1", "camera": "39" },
+                    { "nvr": "1", "camera": "40" }
+                ]
+            }]
+
+        }]
+    }, {
+        "id": "point13",
+        "name": "榮華壩",
+        "pos": {
+            "x": 815,
+            "y": 625
+        },
+        "menu_pos": {
+            "x": 855,
+            "y": 625
+        },
+        "content": [{
+            "name": "榮華壩影像9分割",
+            "actList": [{
+                "act": "3",
+                "param": [{ "nvr": "1", "camera": "9" },
+                    { "nvr": "1", "camera": "7" },
+                    { "nvr": "1", "camera": "8" },
+                    { "nvr": "1", "camera": "22" },
+                    { "nvr": "1", "camera": "23" }
+                ]
+            }]
+
+        }]
+    }]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video1x1</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/video.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="lib/html5shiv.min.js"></script>
+      <script src="lib/respond.min.js"></script>
+    <![endif]-->
+    <script src="lib/jquery.min.js"></script>
+	<script type="text/javascript">
+		var video = {};
+
+		function connect(data) {
+			video = data;
+			if (data.ptz === '1') {
+				$(".ptz").show();
+			}
+			
+			try
+		    {
+		    	var a = MyActiveX1.TestMyMethod(
+		    			video['ip'], 
+		    			video['port'],
+		    			video['account'],
+		    			video['password']);
+		    }
+			catch(e)
+			{
+				alert(e.message);
+			}
+		}
+
+		function ptz(act) {
+			var ptzUrl = "ptz/ptz.php?nvr=" + video.nvr + "&id=" + video.camera + "&act=" + act;
+			$.ajax({
+	      		url: ptzUrl,
+	      		complete: function (response) {
+	          		console.log(response.responseText);
+	      		},
+	        	error: function () {
+	        		alert("Error!");
+	      		}
+	  		});
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<OBJECT ID="MyActiveX1" WIDTH=480 HEIGHT=320
+		 CLASSID="CLSID:36299202-09EF-4ABF-ADB9-47C599DBE778" codebase="myactivex.cab#version=1,0,0,1">
+		    <!--PARAM NAME="_Version" VALUE="65536">
+		    <PARAM NAME="_ExtentX" VALUE="2646">
+		    <PARAM NAME="_ExtentY" VALUE="1323">
+		    <PARAM NAME="_StockProps" VALUE="0"-->
+		</OBJECT>
+	</div>
+
+	<!--
+	<input type="button" value="CONNECT" ONCLICK=manuallyConnect()> </input>
+	-->
+
+	<div style="height:20px"></div>
+
+	<div class="ptz" style="display:none;">
+		<img src='image/up.png' style="left: 100px; top:20px" ONCLICK=ptz("up")>
+		<img src='image/left.png' style="left: 20px; top:80px" ONCLICK=ptz("left")>
+		<img src='image/down.png' style="left: 100px; top:140px" ONCLICK=ptz("down")>
+		<img src='image/right.png' style="left: 180px; top:80px" ONCLICK=ptz("right")>
+
+		<img src='image/home.png' style="left: 100px; top:80px" ONCLICK=ptz("home")>
+		<img src='image/zoom-in.png' style="left: 80px; top:90px; width: 20px; height: 20px" ONCLICK=ptz("in")>
+		<img src='image/zoom-out.png' style="left: 145px; top:90px; width: 20px; height: 20px" ONCLICK=ptz("out")>
+
+		<!-- Not implement yet 
+		<img src='image/down-left.png' style="left: 20px; top:140px">
+		<img src='image/down-right.png' style="left: 140px; top:140px">
+		<img src='image/up-right.png' style="left: 140px; top:20px">	
+		<img src='image/up-left.png' style="left: 20px; top:20px">
+		-->
+		
+	</div>
+</body>
+</html>

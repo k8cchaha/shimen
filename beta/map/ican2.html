@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="big5"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Test</title>
+<meta http-equiv="Content-Type" content="text/html; charset=big5"></head>
+
+<body>
+
+	</div>
+    <table width="200" border="1">
+      <tr>
+        <td><span class="screen">
+        <object id="icsview" tabindex="0" 
+		  classid="clsid:563DF2AD-1EB7-4C84-8DA8-52A0A134E30E"
+		  codebase="./icsview.cab#Version=2,5,0,0"
+		  width="720" height="420">
+        </object>
+</span></td>
+      </tr>
+      <tr>
+        <td>
+		<table width="200" border="0" align="center">
+          <tr>
+            <td>&nbsp;</td>
+            <td><input id="tiltUpBtn" type="button" name="tiltUpBtn" value="上" 
+		onclick="return tiltUpBtn_onclick()" style="WIDTH: 80px" /></td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><input id="panLeftBtn" type="button" name="panLeftBtn" value="左" 
+		onclick="return panLeftBtn_onclick()"  style="WIDTH: 80px"/></td>
+            <td>&nbsp;</td>
+            <td><input id="panRightBtn" type="button" name="panRightBtn" value="右" 
+		onclick="return panRightBtn_onclick()" style="WIDTH: 80px"/></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input id="tiltDownBtn" type="button" name="tiltDownBtn" value="下" 
+		onclick="return tiltDownBtn_onclick()" style="WIDTH: 80px"/></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+	<br>
+		<table width="200" border="0" align="center">
+          <tr>
+            <td><div align="center">
+              <input id="zoomInBtn" type="button" name="zoomInBtn"  value="拉遠" 
+		onclick="return zoomInBtn_onclick()" style="WIDTH: 80px" />
+            </div></td>
+            <td><div align="center">
+              <input id="zoomOutBtn" type="button" name="zoomOutBtn" value="拉近" 
+		onclick="return zoomOutBtn_onclick()"  style="WIDTH: 80px"/>
+            </div></td>
+          </tr>
+          <tr>
+            <td colspan="2"><div align="center">
+              <input type="image" id="relay1" language="javascript" onMouseOver="this.style.cursor='hand'" onClick="return relay1_onclick('relay1','relay')" src="./relay.gif">
+            </div>              <div align="center">
+              </div></td>
+          </tr>
+        </table>		
+		
+		
+		</td>
+      </tr>
+    </table>	
+<SCRIPT language=javascript>
+	var nTimer ;
+	var relay1_state_on=false;
+	var MAX_RELAY_NUM=2
+
+var relay_num;
+var sensor_num;
+var tiltUpTxt = 5;
+var tiltDownTxt = 5;
+var panLeftTxt = 5;
+var panRightTxt =5;
+var zoomInTxt =5;
+var zoomOutTxt = 5;
+var DEFAULT_PTZ_AMOUNT = 5;
+	
+
+	function Play() {
+		window.clearInterval(nTimer);
+	icsview.RtspPort = 554;
+	icsview.UseTCP = 1;
+	icsview.Profile = 1;
+	icsview.Play("192.168.95.17", "1 "- 1);
+	}
+
+	
+	function zoomInBtn_onclick() {
+	amount = parseInt(zoomInTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	zoomInTxt.value = amount;
+	icsview.ZoomInStep(amount);
+}
+
+function zoomOutBtn_onclick() {
+	amount = parseInt(zoomOutTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	zoomOutTxt.value = amount;
+	icsview.ZoomOutStep(amount);
+}
+
+function panLeftBtn_onclick() {
+	amount = parseInt(panLeftTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	panLeftTxt.value = amount;
+	icsview.PanLeft(amount);
+}
+
+function panRightBtn_onclick() {
+	amount = parseInt(panRightTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	panRightTxt.value = amount;
+	icsview.PanRight(amount);
+}
+
+function tiltUpBtn_onclick() {
+	amount = parseInt(tiltUpTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	tiltUpTxt.value = amount;
+	icsview.TiltUp(amount);
+}
+
+function tiltDownBtn_onclick() {
+	amount = parseInt(tiltDownTxt.value);
+	if (isNaN(amount)) {
+		amount = DEFAULT_PTZ_AMOUNT;
+	}
+	amount = Math.min(10, Math.max(1, amount));
+	tiltDownTxt.value = amount;
+	icsview.TiltDown(amount);
+}
+
+function relay1_onclick(obj_name, img_src)
+{
+	obj=eval(obj_name);
+	img='./' + img_src;
+	relay1_state_on=!relay1_state_on;
+	if (relay1_state_on)
+	{
+		icsview.RunExtDevice(1,0,true);
+		img+="_on";
+	}
+	else
+		icsview.RunExtDevice(1,0,false);
+	img+=".gif";
+	obj.src=img;
+}
+
+nTimer=setInterval("window.Play()",100);
+</SCRIPT>
+	
+
+
+<div class="screen">
+		<br/>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+使用api.siterwell.co.uk sign
+
+這個不用
+openssl pkcs12 -inkey privkey.pem -in cert.csr -export -out shimen.pfx
+這個會請你打密碼
+openssl rsa -in privkey.pem -outform PVK -pvk-strong -out myprivatekey.pvk
+
+openssl crl2pkcs7 -nocrl -certfile cert.pem -outform DER -out mycredentials.spc
+
+期限三個月 下一次到期 7/24

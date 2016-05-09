@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+	<title></title>
+	
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="json2.js"></script>
+	
+	<input type="button" value="device" ONCLICK=getDev()> </input>
+	<input type="button" value="map" ONCLICK=getMap()> </input>
+	<input type="button" value="tree" ONCLICK=getTree()> </input>
+	
+</head>
+<body>
+	Load Json File Testing ...
+	<script type="text/javascript">
+	var video = {};
+	function setCamera(data) {
+			video.ip = data.ip;
+			video.port = data.port;
+			video.account = data.account;
+			video.password = data.password;
+			video.nvrId = data.nvrId;
+			video.cameraId = data.cameraId;
+		}
+		
+		
+	// Nvr related function
+	function GetNvrIp(data, nvrId) {
+			return data.nvr[nvrId].ip;
+		}
+	function GetNvrUser(data, nvrId) {
+			return data.nvr[nvrId].user;
+		}
+	function GetNvrPassword(data, nvrId) {
+			return data.nvr[nvrId].password;
+		}	
+	// Camera related function
+	function GetCameraPort(data, nvrId, cameraId) {
+			var camList = data.camera[nvrId - 1].list;
+			for (var i = 0; i < li)
+			return data.camera[cameraId].ip;
+		}	
+	function IsPtzCamera(data, nvrId, cameraId) {
+			return data.camera[cameraId].ip;
+		}		
+		
+	function getDev()
+		{
+			jQuery.ajax({
+				url: "../config/dev.json",
+				type: "GET",
+				data: "",
+				success: function(data){
+					var ip = GetNvrIp(data, 1);
+					var user = GetNvrUser(data, 1);
+					var password = GetNvrPassword(data, 1);
+					var port = GetCameraPort(data, 1, 25);
+				}
+			})
+		}
+	function getMap()
+		{
+			jQuery.ajax({
+				url: "../config/map.json",
+				type: "GET",
+				data: "",
+				success: function(data){
+					var aa = data.point[0].name;
+					alert("aa = " + aa);
+				}
+			})
+		}
+	function getTree()
+		{
+			jQuery.ajax({
+				url: "../config/map.json",
+				type: "GET",
+				data: "",
+				success: function(data){
+					alert("aa = " + data.aa);
+					alert("bb = " + data.bb);
+					var aa = data.aa;
+					var bb = data.bb;
+				}
+			})
+		}	
+	/*$(document).ready(function(){
+		jQuery.ajax({
+			url: "cc.json",
+			type: "GET",
+			data: "",
+			success: function(data){
+				alert("Load json success!!");
+				alert("aa = " + data.aa);
+				alert("bb = " + data.bb);
+				var aa = data.aa;
+				var bb = data.bb;
+			}
+		})
+	})*/
+	</script>
+</body>
+</html>

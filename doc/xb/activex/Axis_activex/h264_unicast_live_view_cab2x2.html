@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>H.264 Live View</title>
+<script language="JavaScript">
+function connect(){}
+</script>
+</head>
+
+<body>
+<form name="test" align="center">
+<h2>H.264 Live View</h2>
+<input type="button" name="Play" value="Play" onClick=connect();>
+</form>
+<table>
+<tr>
+<td>
+	<div>
+	<object id="Player1" height="480" width="640" border="1" classid="CLSID:745395C8-D0E1-4227-8586-624CA9A10A8D" codebase="AMC.cab">
+	  AXIS Media Control (SDK) for Internet Explorer is not installed or failed to initialize.
+	  <param name="AutoStart" value="0">
+	  <param name="UIMode" value="none">
+	  <param name="MediaType" value="h264">
+	  <param name="VideoRenderer" value="65536"> <!-- Use Enhanced Video Renderer for best performance -->
+	  <param name="NetworkTimeout" value="5000"><!-- use this param if you want to change the network timeout -->
+	  <param name="EnableContextMenu" value="true">
+	  <param name="StretchToFit" value="true">
+	  <param name="MaintainAspectRatio" value="true">
+	</object>
+	</div>
+	</td>
+<td>
+	<div>
+	<object id="Player2" height="480" width="640" border="1" classid="CLSID:745395C8-D0E1-4227-8586-624CA9A10A8D" codebase="AMC.cab">
+	  AXIS Media Control (SDK) for Internet Explorer is not installed or failed to initialize.
+	  <param name="AutoStart" value="0">
+	  <param name="UIMode" value="none">
+	  <param name="MediaType" value="h264">
+	  <param name="VideoRenderer" value="65536"> <!-- Use Enhanced Video Renderer for best performance -->
+	  <param name="NetworkTimeout" value="5000"><!-- use this param if you want to change the network timeout -->
+	  <param name="EnableContextMenu" value="true">
+	  <param name="StretchToFit" value="true">
+	  <param name="MaintainAspectRatio" value="true">
+	</object>
+	</div>
+</td>
+</tr>
+<tr>
+<td>
+	<div>
+	<object id="Player3" height="480" width="640" border="1" classid="CLSID:745395C8-D0E1-4227-8586-624CA9A10A8D" codebase="AMC.cab">
+	  AXIS Media Control (SDK) for Internet Explorer is not installed or failed to initialize.
+	  <param name="AutoStart" value="0">
+	  <param name="UIMode" value="none">
+	  <param name="MediaType" value="h264">
+	  <param name="VideoRenderer" value="65536"> <!-- Use Enhanced Video Renderer for best performance -->
+	  <param name="NetworkTimeout" value="5000"><!-- use this param if you want to change the network timeout -->
+	  <param name="EnableContextMenu" value="true">
+	  <param name="StretchToFit" value="true">
+	  <param name="MaintainAspectRatio" value="true">
+	</object>
+	</div>
+</td>
+<td>
+	<div>
+	<object id="Player4" height="480" width="640" border="1" classid="CLSID:745395C8-D0E1-4227-8586-624CA9A10A8D" codebase="AMC.cab">
+	  AXIS Media Control (SDK) for Internet Explorer is not installed or failed to initialize.
+	  <param name="AutoStart" value="0">
+	  <param name="UIMode" value="none">
+	  <param name="MediaType" value="h264">
+	  <param name="VideoRenderer" value="65536"> <!-- Use Enhanced Video Renderer for best performance -->
+	  <param name="NetworkTimeout" value="5000"><!-- use this param if you want to change the network timeout -->
+	  <param name="EnableContextMenu" value="true">
+	  <param name="StretchToFit" value="true">
+	  <param name="MaintainAspectRatio" value="true">
+	</object>
+	</div>
+</td>
+</tr>
+</table>
+
+<object id="h264dec" classid="CLSID:7340F0E4-AEDA-47C6-8971-9DB314030BD7", codebase="h264_dec.cab"></object>
+
+<script language="JavaScript">
+<!--
+var videoSources = [];
+var videoSource1 ={ip:"demo.tw.axis.com", port:3003, ptz: false, areazoom: false, account:"root", password: "pass"};
+videoSources.push(videoSource1);
+var videoSource2 ={ip:"demo.tw.axis.com", port:3003, ptz: false, areazoom: false, account:"root", password: "pass"};
+videoSources.push(videoSource2);
+var videoSource3 ={ip:"demo.tw.axis.com", port:3003, ptz: false, areazoom: false, account:"root", password: "pass"};
+videoSources.push(videoSource3);
+var videoSource4 ={ip:"demo.tw.axis.com", port:3003, ptz: false, areazoom: false, account:"root", password: "pass"};
+videoSources.push(videoSource4);
+
+var players = [document.Player1, document.Player2, document.Player3, document.Player4];
+
+
+function connect()
+{
+  try
+  {
+	//var server = document.getElementById('ip').value;
+	// return values from AMC methods are handled as exceptions in JavaScript
+	for(var i=0;i<players.length;i++)
+	{
+		players[i].Stop();
+		players[i].MediaURL = "axrtsphttp://"+videoSources[i].ip+":"+videoSources[i].port+"/axis-media/media.amp?videocodec=h264";
+		players[i].EnableJoystick = videoSources[i].ptz;
+		players[i].EnableAreaZoom = videoSources[i].areazoom;
+		players[i].MediaUsername = videoSources[i].account;
+		players[i].MediaPassword = videoSources[i].password;
+		if(videoSources[i].ptz == true)
+		{
+			players[i].PTZControlURL = "http://"+videoSources[i].ip+":"+videoSources[i].port+"/axis-cgi/com/ptz.cgi";
+			players[i].UIMode = "ptz-absolute";
+		}
+		else
+		{
+			players[i].UIMode = "digital-zoom";
+		}
+		players[i].Play();
+	  }
+	}
+  catch(e)
+  {
+	alert(e.message);
+  }
+	
+}
+//-->
+function OnPlay()
+{
+  try
+  {
+	//var server = document.getElementById('ip').value;
+	// return values from AMC methods are handled as exceptions in JavaScript
+	document.Player.Stop();
+	document.Player.MediaURL = "axrtsphttp://demo.tw.axis.com:3003/axis-media/media.amp?videocodec=h264";
+	document.Player.EnableJoystick = true;
+	document.Player.EnableAreaZoom = true;
+	document.Player.MediaUsername = "root";
+	document.Player.MediaPassword = "pass";
+	document.Player.PTZControlURL = "http://demo.tw.axis.com:3003/axis-cgi/com/ptz.cgi";
+	document.Player.UIMode = "ptz-absolute";
+	document.Player.Play();
+  }
+  catch(e)
+  {
+  	alert(e.message);
+  	}
+}
+</script>
+
+<script language="JavaScript" for="Player" event="OnError(theError, theMsg)">
+  alert(theError + ' ' + theMsg);
+</script>
+
+</body>
+</html>
