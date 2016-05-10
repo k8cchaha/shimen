@@ -93,7 +93,8 @@
 				} else if (video.length > 1) {
 					width = 560;
 				    height = 315;
-				}		    	for (var i = 0; i < video.length; i++) {
+				}		    	
+				for (var i = 0; i < video.length; i++) {
 		    		objID = "MyActiveX" + i;
 		    		if (video[i]['brand'] === 'samsung') {
 		    			var connectPort = "50" + padLeft(video[i]['id']) + "0";
@@ -108,7 +109,14 @@
 						document[objID].StretchToFit = true;
 						document[objID].MaintainAspectRatio = false;
 						document[objID].Stop();
-						document[objID].MediaURL = "axrtsphttp://" + video[i]['ip'] + ":" + video[i]['port'] + "/axis-media/media.amp?videocodec=h264";
+						if (video[i]['id'] > 255) {
+							// video server
+							document[objID].MediaURL = "http://" + video[i]['ip'] + ":" + video[i]['port'] + "/axis-cgi/mjpg/video.cgi";
+							
+						} else {
+							document[objID].MediaURL = "axrtsphttp://" + video[i]['ip'] + ":" + video[i]['port'] + "/axis-media/media.amp?videocodec=h264";
+						}
+						
 						document[objID].EnableJoystick = true;
 						document[objID].EnableAreaZoom = true;
 						document[objID].MediaUsername = video[i]['user'];
@@ -119,14 +127,14 @@
 		    	}
 
 		    	var total = video.length;
-		    	var height = 320;
+		    	var height = 315;
 		    	var unit = 1;
 		    	if (total > 9) {
 		    		unit = 4;
-		    		height = 160;
+		    		height = 162;
 		    	} else if (total > 4) {
 		    		unit = 3;
-		    		height = 240;
+		    		height = 216;
 		    	} else if (total > 2) {
 		    		unit = 2;
 		    	}

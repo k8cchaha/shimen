@@ -69,6 +69,27 @@ a {
     height: 100%;
 }
 
+.queryData {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.loadingIcon {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+.loadingIcon img {
+    width: 100%;
+    height: 100%;
+}
+
 .mainTitle {
     position: absolute;
     top: 25px;

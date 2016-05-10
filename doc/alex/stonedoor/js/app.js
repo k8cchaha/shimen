@@ -345,7 +345,7 @@ $(document).ready(function() {
                 else {
                     var info = {};
                     info['id'] = param[0].id;
-                    infoWindow =  window.open('eyefalcon.html', "info");
+                    infoWindow =  window.open('eye.html', "info");
                     
                     setTimeout(function(){ infoWindow.getInfo(info); }, 200);   
                 }
@@ -380,36 +380,40 @@ $(document).ready(function() {
         }
     }
 
-    function getTableHtml(data, name, className) {
+	function getTableHtml(data, name, className) {
         var html = "";
         html += "<table class='table table-striped table-bordered'><tr><td style='font-weight:bold;'>地點</td>";
         for (var i = 0; i < data.length; i++) {
             html += "<td>" + data[i].name + "</td>";
         }
+		html += "<td>最後更新</td>";
         html += "</tr>" + "<tbody><tr class='" + className +"'>" + "<td style='font-weight:bold;'>" + name + "</td>";
         for (var j = 0; j < data.length; j++) {
             html += "<td>" + data[j].value + "</td>";
         }
+		html += "<td>" + data[0].lastTime + "</td>";
         html += "</tr></tbody></table>";
 
         return html;
     }
-
+	
     function getEyeTableHtml(data, name, className) {
         var html = "";
         html += "<table class='table table-striped table-bordered'><tr><td style='font-weight:bold;'>地點</td>";
         for (var i = 0; i < data.length; i++) {
             html += "<td>" + data[i].name + "</td>";
         }
+		html += "<td>最後更新</td>";
         html += "</tr>" + "<tbody><tr class='" + className +"'>" + "<td style='font-weight:bold;'>" + '市電電壓' + "</td>";
         for (var j = 0; j < data.length; j++) {
             html += "<td>" + data[j].di + "</td>";
         }
-        
+		html += "<td>" + data[0].lastTime + "</td>";
         html += "</tr>" + "<tr class='" + className +"'>" + "<td style='font-weight:bold;'>" + 'UPS輸出電壓' + "</td>";
         for (var k = 0; k < data.length; k++) {
             html += "<td>" + data[k].do_out + "</td>";
         }
+		html += "<td>" + data[0].lastTime + "</td>";
         html += "</tr></tbody></table>";
 
         return html;
