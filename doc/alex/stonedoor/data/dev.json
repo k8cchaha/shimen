@@ -114,7 +114,10 @@
 			{"id":"26", "name":"３５號固定車牌(號箱)", "brand":"axis", "ip":"192.168.95.109", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
 			{"id":"28", "name":"３６號固定(號箱)", "brand":"axis", "ip":"192.168.95.110", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
 			{"id":"32", "name":"３７號固定車牌(管制站)", "brand":"axis", "ip":"192.168.95.111", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
-			{"id":"37", "name":"３８號固定車牌(管制站)", "brand":"axis", "ip":"192.168.95.112", "port":"80", "user":"root", "password":"pass", "ptz":"0"}
+			{"id":"37", "name":"３８號固定車牌(管制站)", "brand":"axis", "ip":"192.168.95.112", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
+			{"id":"256", "name":"旁收1", "brand":"axis", "ip":"192.168.95.66", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
+			{"id":"257", "name":"旁收2", "brand":"axis", "ip":"192.168.95.67", "port":"80", "user":"root", "password":"pass", "ptz":"0"},
+			{"id":"258", "name":"旁收3", "brand":"axis", "ip":"192.168.95.68", "port":"80", "user":"root", "password":"pass", "ptz":"0"}
 		]
 	},
 	{
