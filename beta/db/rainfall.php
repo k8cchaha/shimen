@@ -40,7 +40,7 @@ if ($id != -1 &&
 
 $date = 'now';
 if (isset($_GET['date'])) {
-	$date = '2016-05-02';
+		$date = $_GET['date'];
 	//echo 'wrong parameter';
 	//return;
 }
