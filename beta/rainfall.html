@@ -26,21 +26,20 @@
 		});
 		
 		function ShowMeDate() {
-			alert(document.querySelector('#date').value);
+			//alert(document.querySelector('#date').value);
+			
+			generate(document.querySelector('#date').value);
 		};
 		
-		
-	</script>	
-  </head>
-  <body>
-	<script type="text/javascript">
-	$(document).ready(function() {
-	var infoUrl = "db/rainfall.php?id=-1&date=2";
+		function generate(date) {
+			var infoUrl = "db/rainfall.php?id=-1&date="  + date;
+	$("#loading").show();
 			$.ajax({
 	      		url: infoUrl,
 				type: "GET",
 				dataType: "json",
 	      		success: function (response) {
+					$("#infoTable").empty();
 					//var json_data = {"density":{"Shemen":"17.030000000000001","Clouds":"9.2899999999999991","High":"4.3200000000000003","Bar":"7.3099999999999996","Scrunch":"10.02","Jade":"9.3399999999999999","White":"11.52","Burg":"12.74","West":"14.460000000000001","Mere":"3.9700000000000002"},"hours":[{"InDate":"2015-09-12 01:00:00.000","hour_num":"1","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 02:00:00.000","hour_num":"2","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 03:00:00.000","hour_num":"3","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 04:00:00.000","hour_num":"4","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 05:00:00.000","hour_num":"5","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 06:00:00.000","hour_num":"6","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 07:00:00.000","hour_num":"7","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 08:00:00.000","hour_num":"8","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 09:00:00.000","hour_num":"9","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 10:00:00.000","hour_num":"10","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 11:00:00.000","hour_num":"11","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 12:00:00.000","hour_num":"12","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 13:00:00.000","hour_num":"13","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 14:00:00.000","hour_num":"14","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 15:00:00.000","hour_num":"15","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 16:00:00.000","hour_num":"16","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 17:00:00.000","hour_num":"17","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"1.0","avg_rain":0.1,"avg_weight":0},{"InDate":"2015-09-12 18:00:00.000","hour_num":"18","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"1.0","avg_rain":0.1,"avg_weight":0},{"InDate":"2015-09-12 19:00:00.000","hour_num":"19","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 20:00:00.000","hour_num":"20","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"2.0","avg_rain":0.2,"avg_weight":0.1},{"InDate":"2015-09-12 21:00:00.000","hour_num":"21","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 22:00:00.000","hour_num":"22","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-12 23:00:00.000","hour_num":"23","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0},{"InDate":"2015-09-13 00:00:00.000","hour_num":"0","minute_num":"0","Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"0.0","avg_rain":0,"avg_weight":0}],"sum":{"Shemen":"0.0","Clouds":"0.0","High":"0.0","Bar":"0.0","Scrunch":"0.0","Jade":"0.0","White":"0.0","Burg":"0.0","West":"0.0","Mere":"4.0","avg_rain":0.4,"avg_weight":0.2}};
 					var json_data = response;
 					var titleName = ["日期", "時間", "石門", "霞雲", "高義", "巴陵", "嘎拉賀", "玉峰", "白石", "鎮西堡", "西丘斯山", "池端", "加權平均", "算術平均"];
@@ -83,10 +82,28 @@
 					$("#loading").hide();
 	      		},
 	        	error: function () {
-	        		alert("Error!");
+	        		//alert("Error!");
+					$("#loading").hide();
 	      		}
 	  		});
-			
+		}
+	</script>	
+  </head>
+  <body>
+	<script type="text/javascript">
+	$(document).ready(function() {
+			var myDate = new Date();
+			var year = myDate.getFullYear();
+			var month = myDate.getMonth() + 1;
+			if(month <= 9)
+				month = '0'+month;
+
+			var day= myDate.getDate();
+			if(day <= 9)
+				day = '0'+day;
+
+			var stamp = year +'-'+ month +'-'+ day;
+			generate(stamp);
 		});
 	
 	</script>
