@@ -285,7 +285,10 @@ $(document).ready(function() {
                     videoWindow.video = video;
                     videoWindow.initActiveX();
                 }, 500);
-                setTimeout(function(){ videoWindow.connect(); }, 1000);
+                setTimeout(function(){ 
+                    videoWindow.connect(); 
+                    videoWindow.focus();
+                }, 1000);
 
                 break;
             case '7':
