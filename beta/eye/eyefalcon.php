@@ -35,10 +35,10 @@ if ($id == -1) {
 		exec($outside_cmd, $output, $return_var);
 		//echo $output[1];
 
-		$temperature = "0.0";
-		$humid = "0.0";
-		$di = "0.0";
-		$do = "0.0";
+		$temperature = "-";
+		$humid = "-";
+		$di = "-";
+		$do = "-";
 		
 		if ($return_var != 3) {
 			$NewString1 = preg_split("/[\s,]+/", $output[1]);

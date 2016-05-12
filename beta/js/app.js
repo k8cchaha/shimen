@@ -345,7 +345,7 @@ $(document).ready(function() {
                 else {
                     var info = {};
                     info['id'] = param[0].id;
-                    infoWindow =  window.open('eyefalcon.html', "info");
+                    infoWindow =  window.open('eye.html', "info");
                     
                     setTimeout(function(){ infoWindow.getInfo(info); }, 200);   
                 }

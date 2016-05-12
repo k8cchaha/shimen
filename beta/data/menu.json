@@ -5,91 +5,124 @@
         "content": [{
             "name": "環湖依山閣",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "2"
-            }]
+			"actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "2" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "環湖_嵩台",
+            "name": "環湖2_嵩台",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "3"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "3" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "溢洪道凸緣",
+            "name": "環湖3_溢洪道凸緣",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "9"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "9" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "大壩_中段",
+            "name": "環湖4_大壩中段",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "4"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "4" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "環湖排砂口",
+            "name": "環湖5_排砂口",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "8"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "8" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "大灣收費站",
+            "name": "環湖6_大灣收費站",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "7"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "7" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "南苑停車場",
+            "name": "環湖7_南苑停車場",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "17"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "17" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "壩頂_表尺",
+            "name": "環湖8_壩頂表尺",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "6"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "6" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "環湖_-PRO",
+            "name": "環湖9_PRO觀景",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "21"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "21" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }, {
-            "name": "嵩台_全景- ",
-            "icon": "3",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "5"
-            }]
-        }, {
-            "name": "惠賓樓全景 ",
+            "name": "嵩台球型全景",
             "icon": "5",
-            "act": "1",
-            "param": [{
-                "nvr": "3",
-                "camera": "18"
-            }]
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "18" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
+        }, {
+            "name": "惠賓樓球型全景 ",
+            "icon": "5",
+            "actList": [{
+                    "act": "1",
+                    "param": [{ "nvr": "3", "camera": "5" }
+                    ]
+                }, { "act": "8", 
+                     "param": [ { "id": "1"}] 
+                }
+            ]
         }]
     }, {
         "id": "2",
@@ -181,7 +214,7 @@
         "id": "3",
         "name": "石門大壩廊道",
         "content": [{
-                "name": "廊道SGU1 ",
+                "name": "廊道SGU-1",
                 "icon": "3",
                 "act": "1",
                 "param": [{
@@ -189,7 +222,7 @@
                     "camera": "10"
                 }]
             }, {
-                "name": "廊道SGU2 ",
+                "name": "廊道SGU-2",
                 "icon": "3",
                 "act": "1",
                 "param": [{
@@ -205,7 +238,7 @@
                     "camera": "12"
                 }]
             }, {
-                "name": "廊道AD19",
+                "name": "廊道AD-19",
                 "icon": "3",
                 "act": "1",
                 "param": [{
